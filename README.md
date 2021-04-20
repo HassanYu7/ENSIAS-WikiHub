@@ -6,7 +6,6 @@
   <p align="center">
     Forum d'échange des questions et des sujets liés à la programmation
     <br />
-    
-    <br />
+
   </p>
 </p>
