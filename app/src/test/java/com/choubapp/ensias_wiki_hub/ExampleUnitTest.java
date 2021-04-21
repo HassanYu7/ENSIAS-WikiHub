@@ -1,4 +1,4 @@
-package com.choubapp.iwim_hub;
+package com.choubapp.ensias_wiki_hub;
 
 import org.junit.Test;
 

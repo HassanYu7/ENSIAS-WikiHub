@@ -15,9 +15,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="IWIM Hub"
+            android:text="@string/app_name"
             android:textColor="@color/bgcolor"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:gravity="center"
             />
@@ -97,36 +97,6 @@
             android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="11dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="3dp"
-        android:id="@+id/member_coach"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginRight="15dp"
-            android:text="Vous êtes?"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Etudiant"
-            android:id="@+id/member_radio_button"
-            android:textSize="20dp"
-            android:layout_marginRight="7dp"
-            android:checked="true"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Professeur"
-            android:id="@+id/coach_radio_button"
-            android:textSize="20dp"
-            android:checked="false"/>
-    </RadioGroup>
     <Button
         android:id="@+id/login_button"
         style="?android:textAppearanceMedium"

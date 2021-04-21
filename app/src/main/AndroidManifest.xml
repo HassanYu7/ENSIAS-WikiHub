@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.choubapp.iwim_hub">
+    package="com.choubapp.ensias_wiki_hub">
 
     <application
         android:allowBackup="true"
@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Registration"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.choubapp.ensias_wiki_hub.Registration"></activity>
+        <activity android:name="com.choubapp.ensias_wiki_hub.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

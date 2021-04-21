@@ -1,2 +1,2 @@
-rootProject.name='IWIM_Hub'
+rootProject.name='ENSIAS_Wiki_Hub'
 include ':app'

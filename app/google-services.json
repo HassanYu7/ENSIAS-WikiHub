@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "700581749542",
-    "project_id": "iwim-hub-9e075",
-    "storage_bucket": "iwim-hub-9e075.appspot.com"
+    "project_number": "138948893780",
+    "project_id": "ensias-wiki-hub",
+    "storage_bucket": "ensias-wiki-hub.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:700581749542:android:01fa632f30c5d5fabbd7e7",
+        "mobilesdk_app_id": "1:138948893780:android:8ced44b06b00c9ed0a61c1",
         "android_client_info": {
-          "package_name": "com.choubapps.iwim_hub"
+          "package_name": "com.choubapp.ensias_wiki_hub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "700581749542-irimrea0fk6hgv6pe4l8127rufee1mv8.apps.googleusercontent.com",
+          "client_id": "138948893780-umek7iprgtr2jqeop5hhinpohsqjeopu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC4_cb9_uRrXczIpxy8s60kS-lpuX3vHyk"
+          "current_key": "AIzaSyBUsIfPeKJ3ABMTVWtCbCoX-xS2zOHS_ms"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "700581749542-irimrea0fk6hgv6pe4l8127rufee1mv8.apps.googleusercontent.com",
+              "client_id": "138948893780-umek7iprgtr2jqeop5hhinpohsqjeopu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
