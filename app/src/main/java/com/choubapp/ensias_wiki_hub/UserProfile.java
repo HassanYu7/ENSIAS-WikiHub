@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +59,19 @@ public class UserProfile extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                //PostItem post = documentSnapshot.toObject(PostItem.class);
+                String id = documentSnapshot.getId();
+                //String path = documentSnapshot.getReference().getPath();
+                Toast.makeText(UserProfile.this,
+                        "Position: " + position + " ID: " + id, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UserProfile.this,PostPage.class);
+                intent.putExtra("POST_DOCUMENT_ID", id);
+                startActivity(intent);
+            }
+        });
     }
 
 

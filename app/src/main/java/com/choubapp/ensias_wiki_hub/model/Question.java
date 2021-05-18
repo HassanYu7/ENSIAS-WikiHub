@@ -59,7 +59,7 @@ public class Question {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDatePosted(Date date) {
         this.date = date;
     }
 

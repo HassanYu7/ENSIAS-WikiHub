@@ -14,9 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 public class PostAdapter extends FirestoreRecyclerAdapter<PostItem,PostAdapter.PostViewHolder> {
-    private ArrayList<PostItem> postList;
+    //private ArrayList<PostItem> postList;
+    private OnItemClickListener listener;
 
 
     public class PostViewHolder extends RecyclerView.ViewHolder {
@@ -27,7 +29,23 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostItem,PostAdapter.P
             title= itemView.findViewById(R.id.post_name);
             vote= itemView.findViewById(R.id.post_vote);
             date= itemView.findViewById(R.id.post_date);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION && listener != null) {
+                        listener.onItemClick(getSnapshots().getSnapshot(position), position);
+                    }
+                }
+            });
         }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(DocumentSnapshot documentSnapshot, int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     public PostAdapter(@NonNull FirestoreRecyclerOptions<PostItem> options) {
