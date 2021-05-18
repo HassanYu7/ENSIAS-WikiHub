@@ -2,13 +2,12 @@ package com.choubapp.ensias_wiki_hub.model;
 
 
 public class User {
-    private String nom, prenom, email, password;
+    private String nom, prenom, email;
 
-    public User(String nom, String prenom, String email, String password) {
+    public User(String nom, String prenom, String email) {
         this.nom = nom;
         this.prenom = prenom;
-        this.email = email;
-        this.password = password;
+        this.email = email;;
     }
 
     public User() {
@@ -38,11 +37,4 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
