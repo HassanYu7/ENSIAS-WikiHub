@@ -6,7 +6,7 @@ import java.util.List;
 public class Question {
     private String title, content, owner;
     private int vote;
-    private Date datePosted;
+    private Date date;
     private List<String> tags;
 
 
@@ -14,12 +14,12 @@ public class Question {
 
     }
 
-    public Question(String title, String content, String owner, int vote, Date datePosted, List<String> tags) {
+    public Question(String title, String content, String owner, int vote, Date date, List<String> tags) {
         this.title = title;
         this.content = content;
         this.owner = owner;
         this.vote = vote;
-        this.datePosted = datePosted;
+        this.date = date;
         this.tags = tags;
     }
 
@@ -55,12 +55,12 @@ public class Question {
         this.vote = vote;
     }
 
-    public Date getDatePosted() {
-        return datePosted;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDatePosted(Date datePosted) {
-        this.datePosted = datePosted;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public List<String> getTags() {
