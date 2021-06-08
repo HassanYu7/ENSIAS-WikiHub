@@ -83,7 +83,6 @@
         android:text="Ask Question"
         android:onClick="AddQuestion"
         android:textStyle="bold"/>
-    <include layout="@layout/footerbar"/>
 
 
 </LinearLayout>

@@ -11,10 +11,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/searchlayout"
         android:orientation="vertical">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:background="@color/white"
             android:gravity="center|right">
 
@@ -22,7 +23,10 @@
                 android:id="@+id/editMobileNo"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
                 android:background="@drawable/edittext"
                 android:ems="10"
                 android:lines="1"
@@ -30,7 +34,26 @@
                 android:drawableLeft="@drawable/search"
                 android:gravity="center" >
             </EditText>
-        </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:onClick="profile"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add New Question"
+                android:layout_margin="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:onClick="newquestion"
+                android:textSize="20sp"
+                android:layout_below="@+id/editMobileNo"
+                android:gravity="end"/>
+        </RelativeLayout>
     </LinearLayout>
    <!--
     <TextView
@@ -53,8 +76,4 @@
         android:layout_below="@+id/searchlayout"
         android:padding="4dp"
         android:scrollbars="vertical"/>
-
-    <include layout="@layout/footerbar"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
 </RelativeLayout>

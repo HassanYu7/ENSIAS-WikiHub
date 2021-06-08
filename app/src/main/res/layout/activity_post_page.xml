@@ -136,5 +136,4 @@
             android:scrollbars="vertical"/>
         </TableLayout>
     </ScrollView>
-    <include layout="@layout/footerbar"/>
 </LinearLayout>
