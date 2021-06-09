@@ -18,7 +18,22 @@
             android:orientation="horizontal"
             android:background="@color/white"
             android:gravity="center|right">
-
+            <!--
+            <SearchView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/edittext"
+                android:ems="10"
+                android:lines="1"
+                android:hint="Search New Topic"
+                android:drawableLeft="@drawable/search"
+                android:gravity="center"/>
+                -->
             <EditText
                 android:id="@+id/editMobileNo"
                 android:layout_width="match_parent"
@@ -32,14 +47,15 @@
                 android:lines="1"
                 android:hint="Search New Topic"
                 android:drawableLeft="@drawable/search"
-                android:gravity="center" >
-            </EditText>
+                android:gravity="center" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/profile"
                 android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
                 android:onClick="profile"
                 android:padding="5dp"/>
             <TextView

@@ -70,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:gravity="right"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorPrimary"
                 android:id="@+id/question_owner"
                 android:text="Asked by..."/>
             <TextView
@@ -78,12 +79,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:gravity="right"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorPrimary"
                 android:id="@+id/question_date"
                 android:text="on ..."/>
         </LinearLayout>
         <View android:background="@color/colorPrimaryDark"
             android:layout_width = "match_parent"
+            android:backgroundTint="@color/black"
             android:layout_height="2dp"/>
         <TextView
             android:layout_width="wrap_content"
