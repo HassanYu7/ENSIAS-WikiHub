@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.Query;
 
 public class UserProfile extends AppCompatActivity {
     TextView name, email;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private PostAdapter adapter;
@@ -49,7 +51,7 @@ public class UserProfile extends AppCompatActivity {
         });
     }
     private void setUpRecyclerView(){
-        Query query = postsCollection.whereEqualTo("owner",FirebaseAuth.getInstance().getCurrentUser().getUid()).orderBy("date", Query.Direction.DESCENDING);
+        Query query = postsCollection.whereEqualTo("owner",FirebaseAuth.getInstance().getCurrentUser().getEmail()).orderBy("date", Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<PostItem> options = new FirestoreRecyclerOptions.Builder<PostItem>()
                 .setQuery(query, PostItem.class)
                 .build();
@@ -74,7 +76,12 @@ public class UserProfile extends AppCompatActivity {
         });
     }
 
-
+    public void logout(View v){
+        auth.signOut();
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(intent);
+    }
 
     @Override
     protected void onStart() {

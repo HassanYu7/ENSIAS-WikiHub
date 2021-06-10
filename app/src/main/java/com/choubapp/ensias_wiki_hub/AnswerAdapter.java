@@ -29,8 +29,8 @@ public class AnswerAdapter extends FirestoreRecyclerAdapter<Answer,AnswerAdapter
         public AnswerViewHolder(@NonNull View itemView) {
             super(itemView);
             content=itemView.findViewById(R.id.answer_content);
-            //owner= itemView.findViewById(R.id.answer_owner);
             vote= itemView.findViewById(R.id.answer_vote);
+            owner= itemView.findViewById(R.id.answer_owner);
             date= itemView.findViewById(R.id.answer_date);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,7 +66,7 @@ public class AnswerAdapter extends FirestoreRecyclerAdapter<Answer,AnswerAdapter
     @Override
     protected void onBindViewHolder(@NonNull AnswerViewHolder holder, int position, @NonNull Answer model) {
         holder.content.setText(model.getContent());
-        //holder.owner.setText(model.getOwner());
+        holder.owner.setText(model.getOwner());
         holder.vote.setText(String.valueOf(model.getVote()));
         SimpleDateFormat newFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
         holder.date.setText(newFormat.format(model.getDate()).toString());

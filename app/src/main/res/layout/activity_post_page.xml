@@ -33,7 +33,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/arrow_up"
+                        android:id="@+id/vote"
                         android:layout_gravity="center"
+                        android:onClick="vote"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -56,19 +58,42 @@
                     android:textStyle="bold"
                     android:text="Loading question..."/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:id="@+id/edit_question"
+                android:layout_margin="5dp"
+                android:onClick="editquestion">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pen"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Edit Question "
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+            </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/question_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:textSize="22sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:text="Loading Content..."/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:gravity="right"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorPrimary"
@@ -77,12 +102,50 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:gravity="right"
                 android:textStyle="bold|italic"
                 android:textColor="@color/colorPrimary"
                 android:id="@+id/question_date"
                 android:text="on ..."/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tags">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Tags:"/>
+                <com.pchmn.materialchips.ChipView
+                    android:id="@+id/chip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:label="Chip 1" />
+                <com.pchmn.materialchips.ChipView
+                    android:id="@+id/chip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:label="Chip 2" />
+                <com.pchmn.materialchips.ChipView
+                    android:id="@+id/chip3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:label="Chip 3" />
+                <com.pchmn.materialchips.ChipView
+                    android:id="@+id/chip4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:label="Chip 4" />
+                <com.pchmn.materialchips.ChipView
+                    android:id="@+id/chip5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:label="Chip 5" />
+            </LinearLayout>
         </LinearLayout>
         <View android:background="@color/colorPrimaryDark"
             android:layout_width = "match_parent"
@@ -96,7 +159,7 @@
             android:layout_gravity="left|center_horizontal"
             android:textColor="@color/colorPrimaryDark"
             android:layout_margin="15dp"
-            android:textSize="26sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             />
         <LinearLayout

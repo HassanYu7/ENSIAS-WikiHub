@@ -50,8 +50,7 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        Query query = postsCollection.orderBy("date", Query.Direction.DESCENDING);
-        setUpRecyclerView(query);
+        setUpRecyclerView();
         final EditText edittext = (EditText) findViewById(R.id.editMobileNo);
         edittext.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -79,7 +78,8 @@ public class Dashboard extends AppCompatActivity {
     }
 
 
-    private void setUpRecyclerView(Query query){
+    private void setUpRecyclerView(){
+        Query query = postsCollection.orderBy("date", Query.Direction.DESCENDING).limit(10);
         FirestoreRecyclerOptions<PostItem> options = new FirestoreRecyclerOptions.Builder<PostItem>()
                 .setQuery(query, PostItem.class)
                 .build();
@@ -95,8 +95,7 @@ public class Dashboard extends AppCompatActivity {
                 //PostItem post = documentSnapshot.toObject(PostItem.class);
                 String id = documentSnapshot.getId();
                 //String path = documentSnapshot.getReference().getPath();
-                Toast.makeText(Dashboard.this,
-                        "Position: " + position + " ID: " + id, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Dashboard.this,"Position: " + position + " ID: " + id, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Dashboard.this,PostPage.class);
                 intent.putExtra("POST_DOCUMENT_ID", id);
                 startActivity(intent);

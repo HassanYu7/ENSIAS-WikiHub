@@ -10,13 +10,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@color/colorPrimaryDark">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logosmall"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Question"
-            android:textColor="@color/bgcolor"
+            android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -60,13 +65,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
         android:id="@+id/content"
         android:hint="Content"
         android:layout_margin="10dp"
-        android:gravity="start"
-        android:inputType="text"
-        android:lines="5"
-        android:maxLines="10"
         android:padding="10dp"
         android:textColor="#000"/>
 

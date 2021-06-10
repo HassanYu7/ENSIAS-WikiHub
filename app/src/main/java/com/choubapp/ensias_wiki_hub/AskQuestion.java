@@ -42,7 +42,7 @@ public class AskQuestion extends AppCompatActivity {
         content= mContent.getText().toString();
         vote=0;
         datePosted = new Date();
-        owner= user.getUid();
+        owner= user.getEmail();
         Question question = new Question(title,content,owner,vote,datePosted,null);
         db.collection("Post").add(question).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override

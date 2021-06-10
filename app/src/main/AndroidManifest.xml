@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PostPage"></activity>
+        <activity android:name=".EditPost"></activity>
+        <activity android:name=".PostPage" />
         <activity android:name=".UserProfile" />
         <activity android:name=".AskQuestion" />
         <activity android:name=".Dashboard" />

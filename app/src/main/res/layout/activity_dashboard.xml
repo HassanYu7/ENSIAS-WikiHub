@@ -59,14 +59,16 @@
                 android:onClick="profile"
                 android:padding="5dp"/>
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add New Question"
+                android:text=" Add New Question "
                 android:layout_margin="15dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
                 android:textStyle="bold"
+                android:layout_alignParentEnd="true"
                 android:onClick="newquestion"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:layout_below="@+id/editMobileNo"
                 android:gravity="end"/>
         </RelativeLayout>
