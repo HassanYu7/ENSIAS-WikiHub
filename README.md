@@ -1,11 +1,9 @@
-# ENSIAS-WikiHub
+# ENSIAS WikiHub - IT Exchange Forum
+
+A mobile app to share questions & answers related to programming with a vote and recommendation system using: Android, Java, XML, Python, Firebase, MLKit.
+
 <p align="center">
+  <br />
 
-  <h3 align="center">ENSIAS wikihub</h3>
-
-  <p align="center">
-    Forum d'échange des questions et des sujets liés à la programmation
-    <br />
-
-  </p>
+<img  src="ENSIASWikiHub.jpg" width="800px" >
 </p>
