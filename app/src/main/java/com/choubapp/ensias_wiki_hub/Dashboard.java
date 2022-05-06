@@ -202,7 +202,7 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void newquestion(View v){
+    public void newQuestion(View v){
         Intent intent = new Intent(this,AskQuestion.class);
         startActivity(intent);
     }
